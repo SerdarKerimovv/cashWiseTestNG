@@ -23,6 +23,8 @@ public class LoginTests extends BaseUI {
 
         waitForUrlContains("dashboard");
 
+
+
         Assert.assertTrue(
                 driver.getCurrentUrl().contains("dashboard"),
                 "Login failed: Dashboard URL not loaded"

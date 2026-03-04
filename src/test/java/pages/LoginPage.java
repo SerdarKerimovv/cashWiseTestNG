@@ -30,6 +30,8 @@ public class LoginPage {
     public WebElement signInButton;
 
 
+
+
     public void login(String email, String password) {
         String loginPageUrl = "https://cashwise.us/main?showLogin=false";
         driver.get(loginPageUrl);
