@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import utils.BaseUI;
 import utils.Driver;
 
@@ -27,8 +28,23 @@ public class CommonPage extends BaseUI {
     @FindBy(xpath = "//a[text()='Infographics']")
     public WebElement infographics;
 
-//    @FindBy(className = "css-3rupl2")
-//    public WebElement languageSelector;
+    @FindBy(xpath = "//li[text()='Reports']/../../../following-sibling::div")
+    public WebElement languageSelector;
+
+    @FindBy(xpath = "//span[text()='English']")
+    public WebElement englishLanguage;
+
+    @FindBy(xpath = "//span[text()='Русский']")
+    public WebElement russianLanguage;
+
+    @FindBy(xpath = "//p[text()='Cash flows']")
+    public WebElement cashFlowText;
+
+    @FindBy (xpath = "//p[text()='Денежные потоки']")
+    public WebElement russianCashFlowText;
+
+    @FindBy(xpath = "//a[text()='Инфографика']")
+    public WebElement russianInfographics;
 
     public void clickSidebarOption(WebElement element) {
         waitAndClick(element);
@@ -46,7 +62,10 @@ public class CommonPage extends BaseUI {
         }
     }
 
-
+    public void languageChange(WebElement element) {
+        waitAndClick(languageSelector);
+        waitAndClick(element);
+    }
 
 
 }

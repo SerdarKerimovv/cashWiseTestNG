@@ -16,7 +16,7 @@ public class CommonPagesTests extends BaseUI {
     WebDriver driver = Driver.getDriver();
 
     @BeforeClass
-    public void loginFirst(){
+    public void loginFirst() {
         loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
     }
 
@@ -38,6 +38,22 @@ public class CommonPagesTests extends BaseUI {
     @Test
     public void clickReports() {
         commonPage.clickSidebarOption(commonPage.reports);
+    }
+
+    @Test
+    public void chooseEnglish() {
+        commonPage.languageChange(commonPage.englishLanguage);
+        commonPage.clickSidebarOption(commonPage.infographics);
+
+        Assert.assertTrue(commonPage.cashFlowText.getText().equals("Cash flows"));
+    }
+
+    @Test
+    public void chooseRussian() {
+        commonPage.languageChange(commonPage.russianLanguage);
+        commonPage.clickSidebarOption(commonPage.russianInfographics);
+
+        Assert.assertTrue(commonPage.russianCashFlowText.getText().equals("'Денежные потоки"));
     }
 
     @AfterClass

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Language selector suite">
+    <test name="Language selector test">
+        <classes>
+            <class name="tests.CommonPagesTests">
+                <methods>
+                    <include name="chooseEnglish"></include>
+                    <include name="chooseRussian"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Common Areas/Account Settings -->
+    <!-- Common Areas/Notifications -->
+</suite>
