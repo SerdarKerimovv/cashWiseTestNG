@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Delete Profile">
+    <test name="delete profile">
+        <classes>
+            <class name="tests.DeleteProfileTests"></class>
+        </classes>
+    </test>
+</suite>
