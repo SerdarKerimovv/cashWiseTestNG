@@ -1,9 +1,7 @@
 package tests;
 
-
-
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SignupPage;
 import utils.BaseUI;
@@ -21,7 +19,7 @@ public class SignupTests extends BaseUI {
                 ConfigurationReader.getProperty("companyName"), ConfigurationReader.getProperty("address"));
 
         waitForUrlContains("dashboard");
-        Assertions.assertTrue(driver.getCurrentUrl().contains("dashboard"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"));
 
     }
 }
