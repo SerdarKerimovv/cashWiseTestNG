@@ -16,9 +16,11 @@ public class ExpensesAddProductTests extends BaseUI {
     ExpensesAddProductPage expensesAddProductPage = new ExpensesAddProductPage();
     CommonPage commonPage=new CommonPage();
 
-    @Test
+    @Test (priority = 1, groups = {"expenses"})
     public void addProductAndServiceTest(){
-        loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
+        loginPage.login(
+                ConfigurationReader.getProperty("username"),
+                ConfigurationReader.getProperty("password"));
         commonPage.expenses.click();
 
         expensesAddProductPage.addProductsAndServices();
@@ -27,6 +29,10 @@ public class ExpensesAddProductTests extends BaseUI {
 
         Assert.assertTrue(driver.getCurrentUrl().contains("expenses"));
 
+    }
+    @Test (priority = 2, dependsOnMethods = "addProductAndServiceTest",groups = {"expenses"})
+    public void verifyExpensesPage(){
+        Assert.assertTrue(driver.getCurrentUrl().contains("expenses"));
     }
 
 }
