@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Reports transactions add income"  parallel="methods" thread-count="2">
+    <test name="transactions add income">
+        <classes>
+            <class name="tests.Reports_TransactionsTests"></class>
+        </classes>
+    </test>
+</suite>
