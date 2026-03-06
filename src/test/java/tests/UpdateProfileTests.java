@@ -15,7 +15,7 @@ public class UpdateProfileTests extends BaseUI {
     UpdateProfilePage updateProfilePage = new UpdateProfilePage();
     LoginPage loginPage = new LoginPage();
 
-    @Test
+    @Test(priority = 1, groups = {"regression"})
     public void updateProfile() {
 
         loginPage.login(

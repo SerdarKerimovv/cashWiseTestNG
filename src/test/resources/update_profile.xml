@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Update Profile">
-    <test name="update profile">
-        <classes>
-            <class name="tests.UpdateProfileTests"></class>
-        </classes>
-    </test>
-</suite>
