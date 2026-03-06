@@ -15,7 +15,7 @@ public class DeleteProfileTests extends BaseUI {
     LoginPage loginPage = new LoginPage();
     DeleteProfilePage deleteProfilePage = new DeleteProfilePage();
 
-    @Test
+    @Test(priority = 1, groups = {"regression"})
     public void deleteProfile() {
 
         loginPage.login(

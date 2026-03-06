@@ -13,7 +13,7 @@ public class LoginTests extends BaseUI {
     WebDriver driver = Driver.getDriver();
     LoginPage loginPage = new LoginPage();
 
-    @Test
+    @Test (priority = 1, groups = {"smoke","regression"})
     public void loginTest() {
 
         loginPage.login(

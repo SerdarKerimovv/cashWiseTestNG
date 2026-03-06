@@ -12,7 +12,7 @@ public class SignupTests extends BaseUI {
     WebDriver driver = Driver.getDriver();
     SignupPage signupPage = new SignupPage();
 
-    @Test
+    @Test(priority = 1, groups = {"smoke","regression"})
     public void signupTest() {
         signupPage.signup(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"),
                 ConfigurationReader.getProperty("firstName"), ConfigurationReader.getProperty("lastName"),
